@@ -1,0 +1,80 @@
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<div class="timeline">
+    <div class="event">
+        <div class="date">Early 1800s</div>
+        <div class="content">
+            <h3>Cane Island</h3>
+            <p>The land was originally known as 'Cane Island', due to the creek that ran through historic Katy's area an was overflowing with tall cane plants. At this time, the land was used by indigenous tribes for hunting and later farmland for early settlers.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1893</div>
+        <div class="content">
+            <h3>Introduction of the Missouri-Kansas-Texas Railroad</h3>
+            <p>The MKT (Missouri - Kansas - Texas) is built through this area to bring crops to export and import goods. These included cattle cotton, coal, and future settlers. This early prairie settlement would later become one of the most booming cities in Texas, beginning with this railroad. This railroad would later become the name-sake of Katy (MKT ---> Katy). As the station became more popular, more families migrated to Katy in search of jobs and a new home.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1934</div>
+        <div class="content">
+            <h3>First Discovery of Oil</h3>
+            <p>The first and discovery well for the Katy's Oil and Gas Field, near the southeast corner of Waller County, was first drilled during this time. This then led Katy to extract 'liquid hydrocarbons from gas'. (essentially taking oil and natural gas from a reserve and bringing it to the surface). Along with Houston, which had lots of oil refineries, they became the most important 'gas condensate field in the US during WW2. From then on, many more oil fields would be discovered and drilled.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Timeline Base*/
+    .timeline {
+        max-width: 800px;
+        margin: auto;
+        border-left: 3px solid #493b31;
+        padding-left: 24px;
+        font-family: 'Lora', serif;
+    }
+
+    /* Individual Events */
+    .event {
+        position: relative;
+        margin-bottom: 32px;
+    }
+
+    /* Timeline Dot */
+    .event::before {
+        content: '';
+        position: absolute;
+        left: -18px;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        background-color: #493b31;
+        border-radius: 50%;
+    }
+
+    .date {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 6px;
+        color: 493b31;
+    }
+
+    .content h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #493b31;
+    }
+
+    /*Body Text */
+    .content p {
+        margin: 6px 0 0;
+        line-height: 1.6;
+        font-size: 15px;
+    }
+</style>

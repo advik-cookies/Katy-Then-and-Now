@@ -1,0 +1,72 @@
+<!--Standalone Image Container-->
+<div class="img-wrapper">
+  
+  <!--Image-->
+  <div class="inner-img">
+    <img src="IMAGE_URL">
+  </div>
+
+  <!--Popup Animal-->
+  <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal">
+
+</div>
+
+<style>
+/* Image Wrapper */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  overflow: visible;
+}
+
+/* Inner Image Styling */
+.inner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.inner-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  line-height: 0;
+}
+
+/* Popup Animal Styling */
+.popup-animal {
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  width: 100px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.img-wrapper:hover .popup-animal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .popup-animal {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-animal {
+    width: 80px;
+  }
+}
+</style>

@@ -1,0 +1,128 @@
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<div class="timeline">
+    <div class="event">
+        <div class="date">1910s</div>
+        <div class="content">
+            <h3>2,000 - 5,000 Acres</h3>
+            <p>It was first introduced in 1901. Because of Katy's humid climate and fertile soil, it was a great spot for early farmers to start cultivating. During this time, farmers typically had around 80 acers per farm.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1920s</div>
+        <div class="content">
+            <h3>5,000 - 15,000 Acres</h3>
+            <p>One of the most known land purchases during this time was from John V. Cardiff (2,000 acres). His rice silo's are still present today (see image carousel).</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1930s</div>
+        <div class="content">
+            <h3>15,000 - 25,000 Acres</h3>
+            <p>The Great Depression was during this time. Land was extremely cheap.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1950s</div>
+        <div class="content">
+            <h3>60,000 - 75,000 Acres</h3>
+            <p>This was the peak rice cultivation inside the Katy region.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1960s</div>
+        <div class="content">
+            <h3>60,000 - 70,000 Acres</h3>
+            <p>During this time the Katy Freeway opened, and was the catalyst for urban sprawl.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1970s</div>
+        <div class="content">
+            <h3>45,000 - 70,000 Acres</h3>
+            <p>There is a decrease due to the growing suburban.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">1980s</div>
+        <div class="content">
+            <h3>30,000 - 45,000 Acres</h3>
+            <p>In 1999, a rice drying facility retired and shut down. This was the J.V. Cardiff Silo we see today.</p>
+        </div>
+    </div>
+    
+    <div class="event">
+        <div class="date">1990s</div>
+        <div class="content">
+            <h3>5,000 - 15,000 Acres</h3>
+            <p>By the 1990s, urbanization was booming. Since the 1950s, there has been a 1287% increase of population.</p>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="date">Present</div>
+        <div class="content">
+            <h3>Less than 1,000 Acres</h3>
+            <p>In Modern Katy, there is less than 1,000 acres. However, in Katy Prairie, there is around 5,000 - 10,000 acres. It has been pushed outside the city limits. Some farms are still active and maintain the rice farming tradition, yet there is urban development, high labor/farming costs, and water shortages catching up.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Timeline Base*/
+    .timeline {
+        max-width: 800px;
+        margin: auto;
+        border-left: 3px solid #493b31;
+        padding-left: 24px;
+        font-family: 'Lora', serif;
+    }
+
+    /* Individual Events */
+    .event {
+        position: relative;
+        margin-bottom: 32px;
+    }
+
+    /* Timeline Dot */
+    .event::before {
+        content: '';
+        position: absolute;
+        left: -18px;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        background-color: #493b31;
+        border-radius: 50%;
+    }
+
+    .date {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 6px;
+        color: 493b31;
+    }
+
+    .content h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #493b31;
+    }
+
+    /*Body Text */
+    .content p {
+        margin: 6px 0 0;
+        line-height: 1.6;
+        font-size: 15px;
+    }
+</style>
