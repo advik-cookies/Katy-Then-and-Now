@@ -4,7 +4,7 @@
 Destination Imagination Team "5 to Infinity" developed the “Katy: Then and Now” web project to highlight community growth and preserve old cultural norms through modern web design.
 While the main site was built in Google Sites, this repository contains the custom code used to enhance the site's functionality and design through embedded HTML/CSS components.
 ### Link to Live Website
-[Link to Katy: Then and Now Live Website][https://sites.google.com/view/katythenandnow/]
+[Link to Katy: Then and Now Live Website](https://sites.google.com/view/katythenandnow/)
 
 ## Custom Components Included
 
