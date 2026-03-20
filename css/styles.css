@@ -1,0 +1,779 @@
+/* ============================================================
+   KATY — THEN AND NOW  |  Main Stylesheet
+   ============================================================
+   Table of Contents:
+     1. CSS Variables & Reset
+     2. Navigation
+     3. Page Layout
+     4. Hero Sections
+     5. Section Blocks & Typography
+     6. Cards & Intro Elements
+     7. Before-After Slider
+     8. Carousel
+     9. Standalone Image Container
+    10. Timelines
+    11. Map Iframes
+    12. Page Navigation Buttons
+    13. Conclusion Page
+    14. Responsive
+   ============================================================ */
+
+
+/* 1. CSS Variables and Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --brown-dark: #3a2e24;
+  --brown-mid: #493b31;
+  --brown-light: #6b5344;
+  --tan: #c9a87c;
+  --tan-light: #e8d5b7;
+  --cream: #f5efe6;
+  --cream-dark: #ede3d4;
+  --gold: #DAA520;
+  --dols-bright: #FFD700;
+  --white: #ffffff;
+  --text-dark: #2c211a;
+  --text-mid: #4a3728;
+  --nav-height: 68px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+
+/* 2. Navigation */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--brown-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 10000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.nav-logo {
+  font-family: 'Monteserrat', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--tan-light);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: felx;
+  gap: 6px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Monteserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tan-light);
+  text-decoration: none;
+  padding: 7px 13px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--brown-mid);
+  color: var(--gold);
+}
+
+/* Hamburger button (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--tan-light);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top : var(--nav-height);
+  left: 0;
+  right: 0;
+  background: var(--brown-dark);
+  padding: 12px 0;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-family: 'Montserrat', sand-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tan-light);
+  text-decoration: none;
+  padding: 12px 29px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.mobile-menu a:hover {
+  background: var(--brown-mid);
+  color: var(--gold);
+}
+
+
+/* 3. Page Layout */
+.page {
+  display: none;
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+}
+
+.page-active {
+  display: block;
+}
+
+.page-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 28px 80px;
+}
+
+/* 4. Hero Sections */
+
+/* Fullscreen into hero */
+.hero {
+  background: linear-gradient(160deg, var(--brown-dark) 0%, var(--brown-mid) 50%, var(--brown-light) 100%);
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 32px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle cross-hatch texture overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a87c' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+.hero-badge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(218,165,32,0.15);
+  border: 1px solid rgba(218,165,32,0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(38px, 7vw, 80px);
+  color: var(--cream);
+  line-height: 1.05;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: clamp(15px, 2vw, 19px);
+  color: var(--tan-light);
+  max-width: 580px;
+  line-height: 1.65;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  color: var(--brown-dark);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(218,165,32,0.4);
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(218,165,32,0.5);
+}
+
+/* Shorter page-level hero banner (used on all pages except Introduction) */
+.page-hero {
+  background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-mid) 100%);
+  padding: 52px 32px 44px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 52px);
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  color: var(--tan-light);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* 5. Section Blocks & Typography */
+
+.section-block {
+  margin-bottom: 64px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid var(--tan-light);
+  margin: 56px 0;
+  opacity: 0.5;
+}
+
+/* Large heading - used for major topics */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 4vw, 34px);
+  color: var(--brown-dark);
+  margin-bottom: 10px;
+}
+
+/* Medium heading - used for subtopics */
+.section-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(17px, 2.5vw, 22px);
+  color: var(--brown-mid);
+  margin-bottom: 14px;
+  margin-top: 32px;
+}
+
+/*Small all-caps label above headings */
+.section-label {
+  font-family: 'Monteserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.body-text {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  margin-bottom: 16px;
+}
+
+/* Image credit line */
+.caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  color: var(--brown-light);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.caption a {
+  color: var(--brown-light);
+}
+
+/* Academic source citation */
+.source-text {
+  font-family: 'MOnteserrat', sans-serif;
+  font-size: 11px;
+  color: #888;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.source-text a {
+  color: #888;
+}
+
+
+/* 6. Cards & Intro Elements */
+
+.intro-story {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  border-left: 5px solid var(--gold);
+  margin-bottom: 32px;
+}
+
+/* Grid of "What You'll Discover" cards */
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat;
+}
+
+.discover-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 22px 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  border-top: 3px solid var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brown-mid);
+  display: felx;
+  align-items: center;
+  gap: 12px;
+}
+
+.discover-card .icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+
+/* 7. Before-After Slider */
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  overflow: visible;
+}
+
+.before-after-contatiner {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  background: #000;
+}
+
+.after-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.before-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.before-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to bottom, #DAA520, #FFD700);
+  cursor: ew-resize;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.slider-handle .arrow {
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slider-handle .arrow.left {left: -20px; }
+.slider-handle .arrow.right {right: -20px; }
+.slider-handle:hover .arrow { opacity: 1;}
+
+.slider-note {
+  font-family: 'Monteserrat', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--brown-light);
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.slider-note::before {
+  content: '🟡';
+  font-style: normal;
+}
+
+
+/* Carousel */
+
+.carousel-outer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: visible;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {background: rgba(0,0,0,0.8);}
+.carousel-btn.prev {left: 10px;}
+.carousel-btn.next {right: 10px;}
+
+
+/* Standalone Image Container */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  overflow: visible;
+}
+
+.inner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.inner-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Popup Animal (used on all containers) */
+
+.popup-animal {
+  position: absolute;
+  bottom: -20px;
+  width: 100px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.popup-animal.pop-right {right: 0;}
+.popup-animal.pop-left {left: 0;}
+
+.slider-wrapper:hover .popup-animal,
+.carousel-outer:hover .popup-animal,
+.img-wrapper:hover .popup-animal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* 10. Timelines */
+
+.timeline {
+  max-width: 800px;
+  margin: auto;
+  border-left: 3px solid var(--brown-mid);
+  padding-left: 24px;
+}
+
+.timeline .event {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline .event::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--brown-mid);
+  border-radius: 50%;
+}
+
+.timeline .date {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--brown-mid);
+}
+
+.timeline .content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: var(--brown-dark);
+}
+
+.timeline .content p {
+  margin: 6px 0 0;
+  line-height: 1.65;
+  font-size: 15px;
+  color: var(--text-mid);
+}
+
+
+/* 11. Map Iframes */
+
+.map-frame {
+  width: 100%;
+  height: 480px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+
+/* 12. Page Navigation Buttons */
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 2px solid var(--tan-light);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-nav-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid var(--brown-mid);
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-nav-btn:hover {
+  background: var(--brown-mid);
+  color: var(--cream);
+}
+
+.page-nav-btn.primary {
+  background: var(--brown-dark);
+  color: var(--cream);
+  border-color: var(--brown-dark);
+}
+
+.page-nav-btn.primary:hover {
+  background: var(--brown-mid);
+}
+
+
+/* 13. Conclusion Page */
+
+.conclusion-hero-inner {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px 44px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+  border-top: 5px solid var(--gold);
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.team-pill {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 18px;
+  background: var(--cream-dark);
+  border-radius: 50px;
+  color: var(--brown-mid);
+  border: 1px solid var(--tan);
+}
+
+.credits-block {
+  background: var(--cream-dark);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+}
+
+.feedback-block {
+  background: linear-gradient(135deg, var(--brown-dark), var(--brown-mid));
+  border-radius: 16px;
+  padding: 36px 40px;
+  text-align: center;
+  color: var(--cream);
+}
+
+.feedback-block p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+
+/* 14. Responsive */
+
+@media (max-width: 860px) {
+  .nav-links {display: none;}
+  .hamburger {display: flex;}
+}
+
+@media (max-width:  768px) {
+  .popup-animal {width: 100px;}
+}
+
+@media (max-width: 600px) {
+  .page-content {padding: 32px 16px 60px;}
+  .intro-story {padding: 24px 20px;}
+  .conclusion-hero-inner {padding: 28px 20px;}
+  .credits-block {padding: 20px 18px;}
+  .feedback-block {padding: 28px 20px;}
+  nav {padding: 0 16px;}
+}
+
+@media (max-width: 480px) {
+  .popup-animal {width: 80px;}
+}
+
+@media(max-width: 900px) and (min-width: 601px) {
+  .carousel-image {
+    max-height: 420px;
+    object-fit: contain;
+    background-color: #000;
+  }
+}

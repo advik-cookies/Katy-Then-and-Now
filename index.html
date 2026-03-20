@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Katy - Then and Now</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+
+    <nav>
+        <span class="nav-logo" onclick="showPage('intro')">Katy - Then &amp; Now</span>
+
+        <!-- Desktop Navigation Links -->
+         <ul class="nav-links">
+            <li><a href="#" onclick="showPage('intro')" id="nav-intro">Introduction</a></li>
+            <li><a href="#" onclick="showPage('photos')" id="nav-photos">Photo Archives</a></li>
+            <li><a href="#" onclick="showPage('land')" id="nav-land">Land Use Transformation</a></li>
+            <li><a href="#" onclick="showPage('culture')" id="nav-culture">Culture</a></li>
+            <li><a href="#" onclick="showPage('animals')" id="nav-animals">Animals</a></li>
+            <li><a href="#" onclick="showPage('conclusion')" id="nav-conclusion">Conclusion</a></li>
+         </ul>
+
+         <!-- Hamburger button (visible on mobile only) -->
+         <div class="hamburger" onclick="toggleNav()">
+             <span></span>
+             <span></span>
+             <span></span>
+         </div>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+     <div class="mobile-menu" id="mobileMenu">
+        <a href="#" onclick="showPage('intro'); toggleMobile()">Introduction</a>
+        <a href="#" onclick="showPage('photos'); toggleMobile()">Photo Archives</a>
+        <a href="#" onclick="showPage('land'); toggleMobile()">Land Use Transformations</a>
+        <a href="#" onclick="showPage('culture'); toggleMobile()">Culture</a>
+        <a href="#" onclick="showPage('animals'); toggleMobile()">Animals</a>
+        <a href="#" onclick="showPage('conclusion'); toggleMobile()">Conclusion</a>
+     </div>
+
+     
+</body>
+</html>
