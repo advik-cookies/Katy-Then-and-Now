@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Addicks & Barker Area</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 100vh; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const centerLat = 29.80;
+  const centerLng = -95.65;
+
+  const map = L.map('map').setView([centerLat, centerLng], 12);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  const taylorLat = 29.77748;
+  const taylorLng = -95.73179;
+  
+  L.marker([taylorLat, taylorLng])
+    .addTo(map)
+    .bindPopup('<b>James E. Taylor High School</b><br>20700 Kingsland Blvd, Katy, TX')
+    .openPopup();
+</script>
+
+</body>
+</html>

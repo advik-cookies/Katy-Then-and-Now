@@ -143,6 +143,7 @@ function initCarousel(outerId) {
     Add a new entry whenever you add a new carousel to the HTML. 
 */
 const CAROUSEL_IDS = [
+    '.carousel-katyhistory',
     '.carousel-ricefields',
     '.carousel-oilfields',
     '.carousel-astroworld',
