@@ -24,7 +24,7 @@ These components were created to extend the design flexibility of Google Sites a
 - HTML5
 - CSS3
 - JavaScript
-- Embedded code integration within Google Sites
+- Hosted with AWS
 
 ## Purpose of This Repository
 
