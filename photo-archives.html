@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Katy - Then and Now | Photo Archives</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <a class="nav-logo" href="index.html">Katy — Then &amp; Now</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="photo-archives.html" class="active">Photo Archives</a></li>
+            <li><a href="land-use-transformations.html">Land Use</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMobile()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Introduction</a>
+    <a href="photo-archives.html">Photo Archives</a>
+    <a href="land-use-transformations.html">Land Use</a>
+    <a href="culture.html">Culture</a>
+    <a href="animals.html">Animals</a>
+    <a href="conclusion.html">Conclusion</a>
+    </div>
+
+    
+    <!-- Page 2 - Photo Archives -->
+
+    <div class="page">
+        <div class="page-hero">
+            <h1>Photo Archives</h1>
+            <p>Visual history of Katy's most iconic locations - then and now.</p>
+        </div>
+
+        <div class="page-content">
+
+            <!-- ADDICKS & BARKER AREA -->
+            <div class="section-block">
+                <span class="section-label">Addicks &amp; Barker Area</span>
+                <h2 class="section-title">Home to James E. Taylor High School</h2>
+
+                <!-- Map -->
+                <iframe class="map-frame" src="maps/addicks-barker-map.html"></iframe>
+            </div>
+
+            <!-- Barker Settlement -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Echoes from the Barker Settlement</h3>
+                <p class="body-text" style="margin-top: 20px;">
+                    This quiet scene of the Barker Store, a church, and modest homes, shows a glimpse into a once
+                    thriving rural outpost in the LH7 Ranch area. The presence of a U.S. Post Office sign hints at
+                    its role as a lifeline for local families. According to "The LH7 Ranch in Houston's Shadow",
+                    when the Katy Railroad had its tracks laid, the new general store was located near it, and this
+                    general store housed the United States Post Office. Like this general store, most businesses were
+                    built by the raildroad station as the railroad gave access to raw materials at a quick speed.
+                    Though time has weathered down the buildings and emptied the streets, it shows the spirit of early
+                    Texas settlements. The post office had been moved and later demolished.Fortunately, the church
+                    and some of the homes are still seen today as it has been moved to the property of Iglesia Sobre
+                    La Roca, Katy. 
+                </p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img"><img src="img/photo_archives/buildings.PNG" alt="Barker Settlement"></div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="caption">Image Date: 2005 · Image courtesy of <a href="https://ths.katyisd.org/" target="_blank">James E. Taylor High School</a></p>
+                <p class="source-text">Sources: Sizemore, Deborah Lightfoot. "The LH7 Ranch in Houston's Shadow: The E. H. Marks' Legacy from Longhorns to the Salt Grass Trail". UNT Press, 1991.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Feeding Time -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Feeding Time at LH7 Ranch</h3>
+                <p class="body-text">
+                    E.H Marks was an early Texas rancher whose LH7 Ranch operated along routes by the Salt Grass
+                    Trail, a cattle-driving corridor across the coastal plains. Native salt grasses sustained herds
+                    and shaped the movement of cattle toward markets and rail lines. The LH7 Ranch, established in
+                    1907, was the largest ranch in the area until its shutdown in 1945 when the land was claimed.
+                    In this photograph, E. H. Marks stands among his cattle, offering hay to his favorite longhorn
+                    with confidence of a seasoned rancher. Scenes like this were everyday realities in Old Katy as
+                    ranching was not just work, but a legacy passed down through generations.
+                </p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img"><img src="img/photo_archives/feeding.PNG" alt="Feeding Time at LH7 Ranch"></div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="caption">Image Date: 1930s · Image courtesy of <a href="https://ths.katyisd.org/" target="_blank">James E. Taylor High School</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Marks Family Homestead -->
+            <div class="section-block">
+                <h3 class="section-subtitle">The Marks Family Homestead</h3>
+                <p class="body-text">
+                    This photograph captures E.H. Marks with his family standing proudly before their home in
+                    Addicks. The saddled horse beside them shows the daily life in early Katy in ranching and rural
+                    living. More than a portrait, this image preserves the legacy of the Mark's family and their role.
+                </p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img"><img src="img/photo_archives/house.PNG" alt="Marks Family Homestead"></div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="caption">Image Data: 1920-1930s · Image courtesy of <a href="https://ths.katyisd.org/" target="_blank">James E. Taylor High School</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Old Katy Divider -->
+            <div class="section-block">
+                <span class="section-label">Old Katy</span>
+            </div>
+
+            <!-- The Katy Hotel -->
+            <div class="section-block">
+                <h3 class="section-subtitle">The Katy Hotel</h3>
+                <p class="body-text">
+                    The Katy Hotel was opened in 1897 by J.C. Owens on the Northeast corner of Avenue A and Second
+                    Street. In 1908, ownership passed to David Jacquemin and his wife, Mary. They managed the hotel
+                    with precision and hospitality of the Harvey Houses. After being purchased by August Marks in
+                    1910, the hotel operated until the 1930s. It closed and was reused by various businesses. The
+                    structure was moved in 1966 and later demolished. At the original location, a church has been built.
+                </p>
+
+                <!-- Slider -->
+                <div class="slider-wrapper" id="ba-hotel">
+                    <div class="before-after-container">
+                        <img src="img/photo_archives/katy_hotel.jpg" class="after-img" alt="Katy Hotel - Now">
+                        <div class="before-image"><img src="img/photo_archives/katy_hotel_old.jpg" class="before-img" alt="Katy Hotel - Then"></div>
+                        <div class="slider-handle">
+                            <span class="arrow left">◀</span>
+                            <span class="arrow right">▶</span>
+                        </div>
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="slider-note">Move the orange slider to compare before and after!</p>
+                <p class="caption">Before image courtesy of <a href="https://www.katyheritagesociety.com/" target="_blank">The Johnny Nelson Katy Heritage Museum</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Katy Elementary School -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Katy Elementary School</h3>
+                <p class="body-text">
+                    The first Katy Elementary School began in 1898 serving the small farming and railroad communities.
+                    It expanded as the town grew showing the beginning of organized education in Katy. A new building
+                    was constructed on the same site in 1965 with renovations in 1989 and 1995.
+                </p>
+
+                <!-- Slider -->
+                <div class="slider-wrapper" id="ba-elementary">
+                    <div class="before-after-container">
+                        <img src="img/photo_archives/katy_elementary.jpg" class="after-img" alt="Katy Elementary - Now">
+                        <div class="before-image"><img src="img/photo_archives/katy_elementary_old.jpg" class="before-img" alt="Katy Elementary - Then"></div>
+                        <div class="slider-handle">
+                            <span class="arrow left">◀</span>
+                            <span class="arrow right">▶</span>
+                        </div>
+                    </div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="slider-note">Move the orange slider to compare before and after!</p>
+                <p class="caption">Before image courtesy of <a href="https://www.katyheritagesociety.com/" target="_blank">The Johnny Nelson Katy Heritage Museum</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Stewart and Wright Druggists -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Stewart and Wright Druggists</h3>
+                <p class="body-text">
+                    Founded by Dr. J. M. Stewart and John H. Wright in 1904, Stewart and Wright Druggists opened its
+                    doors at the Southeast corner of Second Street and Avenue B. The pharmacy served the growing Katy
+                    community for decades until its closure in 1991. Now, The McMeans Brothers Landscape Designs stands there.
+                </p>
+
+                <!-- Slider -->
+                <div class="slider-wrapper" id="ba-stewart">
+                    <div class="before-after-container">
+                        <img src="img/photo_archives/druggists.jpg" class="after-img" alt="Stewart and Wright Druggists - Now">
+                        <div class="before-image"><img src="img/photo_archives/druggists_old.jpg" class="before-img" alt="Stewart and Wright Druggists - Then"></div>
+                        <div class="slider-handle">
+                            <span class="arrow left">◀</span>
+                            <span class="arrow right">▶</span>
+                        </div>
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="slider-note">Move the orange slider to compare before and after!</p>
+                <p class="caption">Before image courtesy of <a href="https://www.katyheritagesociety.com/" target="_blank">The Johnny Nelson Katy Heritage Museum</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Viewing West from Avenue A -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Viewing West from Avenue A down 2nd Street</h3>
+                <p class="body-text">
+                    Viewing west from Avenue A down 2nd street, this scene reflects the growth of the city and town's heart over time.
+                </p>
+
+                <!-- Slider -->
+                <div class="slider-wrapper" id="ba-avenue">
+                    <div class="before-after-container">
+                        <img src="img/photo_archives/avenue_a.jpg" class="after-img" alt="Viewing West from Avenue A down 2nd Street - Now">
+                        <div class="before-image"><img src="img/photo_archives/avenue_a_old.PNG" class="before-img" alt="Viewing West from Avenue A down 2nd Street - Then"></div>
+                        <div class="slider-handle">
+                            <span class="arrow left">◀</span>
+                            <span class="arrow right">▶</span>
+                        </div>
+                    </div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="slider-note">Move the orange slider to compare before and after!</p>
+                <p class="caption">Before image courtesy of <a href="https://www.katyheritagesociety.com/" target="_blank">The Johnny Nelson Katy Heritage Museum</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Hotel Clardy -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Hotel Clardy</h3>
+                <p class="body-text">
+                    Hotel Clardy, opened by Lafayette W. Clardy, his wife Matilda, and daughter Nellie in 1897, was
+                    the second original hotel in Old Katy. Matilda ran the office and later was the bookkeeper of the
+                    Katy Rice Mill. The Clardys closed the hotel in 1916 and moved to Pasadena, leaving the building
+                    to be demolished. Now, a Valero Gas Station and a few convenience stores stand in that location.
+                </p>
+
+                <!-- Slider -->
+                <div class="slider-wrapper" id="ba-clardy">
+                    <div class="before-after-container">
+                        <img src="img/photo_archives/hotel_clardy.jpg" class="after-img" alt="Hotel Clardy - Now">
+                        <div class="before-image"><img src="img/photo_archives/hotel_clardy_old.jpg" class="before-img" alt="Hotel Clardy - Then"></div>
+                        <div class="slider-handle">
+                            <span class="arrow left">◀</span>
+                            <span class="arrow right">▶</span>
+                        </div>
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="slider-note">Move the orange slider to compare before and after!</p>
+                <p class="caption">Before image courtesy of <a href="https://www.katyheritagesociety.com" target="_blank">The Johnny Nelson Katy Heritage Museum</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Rice Mill -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Rice Mill - Schoor Milling Company</h3>
+                <p class="body-text">
+                    Built by the Schoor Milling Company, this rice mill was one of a dozen in the region. After being
+                    converted into a warehouse and undergoing several ownership changes, it was demolished in the late
+                    1970s to early 1980s. A McDonald's now stands at this location.
+                </p>
+
+                <!-- Slider -->
+                <div class="slider-wrapper" id="ba-ricemill">
+                    <div class="before-after-container">
+                        <img src="img/photo_archives/rice_mill.jpg" class="after-img" alt="Rice Mill - Now">
+                        <div class="before-image"><img src="img/photo_archives/rice_mill_old.PNG" class="before-img" alt="Rice Mill - Then"></div>
+                        <div class="slider-handle">
+                            <span class="arrow left">◀</span>
+                            <span class="arrow right">▶</span>
+                        </div>
+                    </div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="slider-note">Move the orange slider to compare before and after!</p>
+                <p class="caption">Before image courtesy of <a href="https://www.katyheritagesociety.com" target="_blank">The Johnny Nelson Katy Heritage Museum</a></p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- MKT Railroad Depot -->
+            <div class="section-block">
+                <h3 class="section-subtitle">Missouri-Kansas-Texas Railroad Depot</h3>
+                <p class="body-text">
+                    The Missouri-Kansas-Texas (MKT) Railroad Depot, constructed in 1898, served residents and attracted
+                    settlers. After passenger service ended, the depot was relocated to the Katy City Park in 1957 and
+                    then moved again in 2005 to its current spot to avoid demolition. Now, it acts as a museum and
+                    visitor center for the historic town.
+                </p>
+
+                <!-- Slider -->
+                <div class="slider-wrapper" id="ba-depot">
+                    <div class="before-after-container">
+                        <img src="img/photo_archives/mkt.jpg" class="after-img" alt="MKT - Now">
+                        <div class="before-image"><img src="img/photo_archives/mkt_old.jpg" class="before-img" alt="MKT - Then"></div>
+                        <div class="slider-handle">
+                            <span class="arrow left">◀</span>
+                            <span class="arrow right">▶</span>
+                        </div>
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="slider-note">Move the orange slider to compare before and after!</p>
+                <p class="caption">Before image courtesy of <a href="https://www.katyheritagesociety.com" target="_blank">The Johnny Nelson Katy Heritage Museum</a></p>
+            </div>
+
+            <div class="page-nav">
+                <a href="index.html" class="page-nav-btn">← Back: Introduction</a>
+                <a href="land-use-transformations.html" class="page-nav-btn primary">Next: Land Use Transformations →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

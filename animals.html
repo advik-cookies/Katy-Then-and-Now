@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Katy - Then and Now | Animals</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a class="nav-logo" href="index.html">Katy — Then &amp; Now</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="photo-archives.html">Photo Archives</a></li>
+            <li><a href="land-use-transformations.html">Land Use</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="animals.html" class="active">Animals</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMobile()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Introduction</a>
+    <a href="photo-archives.html">Photo Archives</a>
+    <a href="land-use-transformations.html">Land Use</a>
+    <a href="culture.html">Culture</a>
+    <a href="animals.html">Animals</a>
+    <a href="conclusion.html">Conclusion</a>
+    </div>
+
+    <!-- Page 5 - Animals -->
+    <div class="page">
+        <div class="page-hero">
+            <h1>Animals</h1>
+            <p>The wildlife of Katy - those that have vanished, those that remain, and those that have arrived.</p>
+        </div>
+
+        <div class="page-content">
+            
+            <!-- Texas Longhorn -->
+            <div class="section-block">
+                <h2 class="section-title">Texas Longhorn</h2>
+                <p class="body-text">The iconic Texas Longhorn is one of the most recognized symbols of Texas's ranching heritage, known for its distinctive long, curved horns. These cattle were essential to early settlers and cattle drives, thriving in harsh conditions with minimal care. However, by the late 1800s, as ranchers shifted to breeds that produced more beef and fat, the Texas Longhorn population sharply declined, putting the breed at risk for extinction. E. H. Marks of the LH7 Ranch played a key role in preserving the Longhorn by hand-selecting traditional animals to maintain their unique genetics and promote breeding programs. Today, Texas Longhorns remain a living symbol of Texas history and resilience.</p>
+                
+                <!-- Image Wrapper-->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/longhorn.jpg" alt="Texas Longhorn">
+                    </div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: Ed Schipul / Flickr, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en" target="_blank">CC-BY-SA 2.0</a></p>
+                <p class="source-text">Sources: Sizemore, Deborah Lightfoot. "The History of LH7 Ranch." Texas State Historical Association, 2020. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- American Bison -->
+            <div class="section-block">
+                <h2 class="section-title">American Bison</h2>
+                <p class="body-text">Great herds of American bison were a defining sight on the Texas coastal prairies before European settlement. They used to graze vast expanses of grassland near present-day Katy. As settlers arrived during the 1800s, bison were hunted for their meat and hides, and their habitat was converted to farmland and ranches. By the late 1800s, wild bison had disappeared from the region. Today, they are well outside the region of Katy and Houston.</p>
+                
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/bison.jpg" alt="American Bison">
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: Larry D. Moore / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">CC-BY 4.0</a></p>
+                <p class="source-text">Sources: Alvarez, Elizabeth Cruce, and Robert Plocheck. "Texas Almanac 2014–2015". Texas A&amp;M University Press, 2014. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Bear -->
+            <div class="section-block">
+                <h2 class="section-title">Bear</h2>
+                <p class="body-text">The American black bear historically ranged into far eastern and southeastern parts of Texas, and these bears would occasionally travel through prairies and forests near Katy. However, heavy hunting and loss of wooded habitat in the 1800s and early 1900s caused bears to vanish from most of Texas, including the Katy area. Today, occasional sightings in the broader Houston region are extremely rare.</p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/bear.jpg" alt="Bear">
+                    </div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: Michelle Buntin / Wikimedia Commons, Public Domain</p>
+                <p class="source-text">Sources: Wikipedia Contributors. "Big Thicket." Wikipedia, Wikimedia Foundation, 22 Dec. 2025. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Hog -->
+            <div class="section-block">
+                <h2 class="section-title">Hog</h2>
+                <p class="body-text">Feral hogs (wild pigs) are an increasingly common wildlife presence in Katy. Introduced long ago by European settlers, these animals thrive in forest edges, parks, and even subdivisions. As Katy's development expands into former wildlands, hogs are being pushed into neighborhoods, creating damage to yards and parks. Local trapping programs have removed many from some neighborhoods, but feral hogs remain a persistent challenge throughout the area.</p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/hog.jpg" alt="Hog">
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: USDA NRCS Texas / Flickr, <a href="https://creativecommons.org/licenses/by/2.0/deed.en" target="_blank">CC-BY 2.0</a></p>
+                <p class="source-text">Sources: Clark, Natalie Cook. "Rain Stirs up Feral Hogs in Katy Neighborhoods." Katy Magazine, 21 Mar. 2024. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Wolf -->
+            <div class="section-block">
+                <h2 class="section-title">Wolf</h2>
+                <p class="body-text">Wolves, especially Texas Gray Wolves, roamed across much of Texas, including the prairie lands around what is now Katy. Over time, as settlers arrived and agriculture expanded, wolves were removed from the region through hunting and habitat loss. By the early 20th century, native wolves were effectively eliminated from Texas and are no longer part of the Katy ecosystem.</p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/wolf.png" alt="Wolf">
+                    </div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: American Farmer Magazine, Vol. 4, p. 201, 1898 / Wikimedia Commons, Public Domain</p>
+                <p class="source-text">Sources: Dubois, Scott. "Harris County Wolves – 1938." Wildtexashistory.com, 1 Apr. 2020. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Fox -->
+            <div class="section-block">
+                <h2 class="section-title">Fox</h2>
+                <p class="body-text">Foxes are part of the native mammal community across the Katy region, using wooded edges, creeks, and undeveloped lots for hunting and thriving. They feed on rodents, rabbits, and birds and are occasionally seen at dawn or dusk near neighborhoods or parks. While they generally avoid people, foxes adapt well to suburban environments.</p>
+                
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/fox.jpg" alt="Fox">
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: National Park Service (trail camera) / Wikimedia Commons, Public Domain</a></p>
+                <p class="source-text">Sources: Wikipedia Contributors. "Texas Blackland Prairies." Wikipedia, Wikimedia Foundation, 19 Sept. 2019. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Canadian Goose -->
+            <div class="section-block">
+                <h2 class="section-title">Canadian Goose</h2>
+                <p class="body-text">Large flocks of migratory Canadian geese used to extensively pass through the Katy region seasonally, drawn to the rice fields, ponds, and waterways near town. However, the population of these birds has severely decreased due to the loss of rice fields and the urbanization boom. These birds have become an important symbol of Katy's connection to its natural prairie and agricultural heritage.</p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/goose.jpg" alt="Canadian Goose">
+                    </div>
+                    <img src="https://i.imgur.com/fDsx1sS.png" class="popup-animal pop-right" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: Larry D. Moore / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">CC-BY 4.0</a></p>
+                <p class="source-text">Sources: Clark, Gary. "Migratory Birds Spend Winter on Katy Prairie." Chron, 7 Nov. 2008. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Pigeon -->
+            <div class="section-block">
+                <h2 class="section-title">Pigeon</h2>
+                <p class="body-text">Rock pigeons, the gray city pigeons seen around buildings, parks, and parking lots in Katy, are not native wild birds but descendants of domesticated birds brought from Europe. These birds thrive in urban and suburban areas by feeding on seeds, human food scraps, and nesting on ledges and structures. Unlike the numerous large mammals that vanished from Texas in earlier times, pigeons are abundant and a common sight in the modern Katy landscape.</p>
+
+                <!-- Image Wrapper -->
+                <div class="img-wrapper">
+                    <div class="inner-img">
+                        <img src="img/animals/pigeon.jpg" alt="Pigeon">
+                    </div>
+                    <img src="https://i.imgur.com/8bud9ho.png" class="popup-animal pop-left" alt="Popup Animal">
+                </div>
+                <p class="caption">Image: RobertKixmiller / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC-BY-SA 4.0</a></p>
+                <p class="source-text">Sources: Texas Parks and Wildlife. "Rock Pigeon (Columba Livia)." Tpwd.texas.gov. Accessed 3 Jan. 2026.</p>
+            </div>
+
+            <div class="page-nav">
+                <a href="culture.html" class="page-nav-btn">← Back: Culture</a>
+                <a href="conclusion.html" class="page-nav-btn primary">Next: Conclusion →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

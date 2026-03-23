@@ -2,35 +2,19 @@
    KATY — THEN AND NOW  |  Main JavaScript
    ============================================================
    Table of Contents:
-     1. Page Navigation
-     2. Mobile Menu
-     3. Before-After Sliders
-     4. Carousels
+    1. Mobile Method
+    2. Before-After Sliders
+    3. Carousels
    ============================================================ */
 
-   
-/* 1. Page Navigation */
-
-function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getSelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById('page-' = id).classList.add('active');
-
-    const navEl = document.getElementById('nav-' + id);
-    if (navEl) navEl.classList.add('active');
-
-    window.scrollTo({ top: 0, behvaior: 'smooth'});
-}
-
-
-/* 2. Mobile Menu */
-
+/* 1. Mobile Method */
 function toggleMobile() {
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('open');
 }
 
-/* 3. Before-After Sliders 
+
+/* 2. Before-After Sliders 
     Each slider has:
     .slider-wrapper which is the outer container (used for popup animal hover)
     .before-after-container which holds both images and the handle
@@ -45,12 +29,12 @@ function initSlider(wrapperId) {
 
     const container = wrapper.querySelector('.before-after-container');
     const beforeImage = container.querySelector('.before-image');
-    const handle = container.querySelector('slider-handle');
+    const handle = container.querySelector('.slider-handle');
     let isDragging = false;
 
     const afterImg = container.querySelector('.after-img');
     afterImg.addEventListener('load', () => {
-        beforeImage.computedStyleMap.height = container.offsetHeight + 'px';
+        beforeImage.style.height = container.offsetHeight + 'px';
     });
 
     /* Mouse Events */
@@ -110,7 +94,7 @@ const SLIDER_IDS = [
 
 SLIDER_IDS.forEach(initSlider);
 
-/* 4. Carousels
+/* 3. Carousels
     Each carousel has:
     .carousel-outer which is the outer container used for popup animal hover
     .carousel-container which are the flex row of images; moved via translateX
@@ -143,17 +127,10 @@ function initCarousel(outerId) {
     Add a new entry whenever you add a new carousel to the HTML. 
 */
 const CAROUSEL_IDS = [
-    '.carousel-katyhistory',
-    '.carousel-ricefields',
-    '.carousel-oilfields',
-    '.carousel-astroworld',
+    'carousel-katyhistory',
+    'carousel-ricefields',
+    'carousel-oilfields',
+    'carousel-astroworld',
 ];
 
 CAROUSEL_IDS.forEach(initCarousel);
-
-
-/* INIT - runs after the DOM is ready */
-document.addEventListener('DOMContentLoaded', () => {
-    const defaultNav = document.getElementById('nav-intro');
-    if (defaultNav) defaultNav.classList.add('active');
-});
