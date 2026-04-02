@@ -11,6 +11,8 @@
 
 From its origins as a quiet railroad town known as "Cane Island" to its rise as one of Texas's most vibrant and international cities, this website documents Katy's transformation through photographs, maps, timelines, and stories passed down through generations.
 
+**Visit our website through this link: [katythenandnow.org](https://katythenandnow.org)**
+
 ---
 
 ## Features
@@ -83,9 +85,9 @@ katy-site/
 
 ---
 
-## Running the Project
+## Viewing the Project
 
-Visit our website through this link: 
+**Visit our website through this link: [katythenandnow.org](https://katythenandnow.org)**
 
 ---
 
