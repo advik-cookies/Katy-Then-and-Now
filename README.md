@@ -21,6 +21,7 @@ From its origins as a quiet railroad town known as "Cane Island" to its rise as 
 - **Image Carousels** — Browse collections of historical and modern photographs across multiple topics
 - **Interactive Maps** — Explore historical map overlays of Katy's roads, zoning, and landmarks using Leaflet.js with adjustable opacity controls
 - **Timelines** — Follow the chronological story of Katy's land use and rice farming history
+- **Population Graph** - Shows Katy's population over time
 - **Popup Animals** — A fun hover feature designed to engage younger audiences as they explore the site
 - **Fully Responsive** — Works on desktop, tablet, and mobile with a hamburger navigation menu for small screens
 
