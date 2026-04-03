@@ -2,20 +2,21 @@
    KATY — THEN AND NOW  |  Main Stylesheet
    ============================================================
    Table of Contents:
-     1. CSS Variables & Reset
-     2. Navigation
-     3. Page Layout
-     4. Hero Sections
-     5. Section Blocks & Typography
-     6. Cards & Intro Elements
-     7. Before-After Slider
-     8. Carousel
-     9. Standalone Image Container
-    10. Timelines
-    11. Map Iframes
-    12. Page Navigation Buttons
-    13. Conclusion Page
-    14. Responsive
+    1. CSS Variables & Reset
+    2. Navigation
+    3. Page Layout
+    4. Hero Sections
+    5. Section Blocks & Typography
+    6. Cards & Intro Elements
+    7. Before-After Slider
+    8. Carousel
+    9. Standalone Image Container
+    10. Popup Animal
+    11. Timelines
+    12. Map Iframes
+    13. Population Chart
+    14. Page Navigation Buttons
+    15. Responsive
    ============================================================ */
 
 
@@ -374,29 +375,27 @@ nav {
 }
 
 /* Grid of "What You'll Discover" cards */
-.discover-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.discover-list {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.discover-card {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 22px 20px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-  border-top: 3px solid var(--gold);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--brown-mid);
+.discover-list li {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: var(--text-mid);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--tan-light);
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.discover-card .icon {
-  font-size: 24px;
-  flex-shrink: 0;
+.discover-list li:last-child {
+  border-bottom: none;
 }
 
 
@@ -490,7 +489,7 @@ nav {
 }
 
 
-/* Carousel */
+/* 8. Carousel */
 
 .carousel-outer {
   position: relative;
@@ -538,7 +537,7 @@ nav {
 .carousel-btn.next {right: 10px;}
 
 
-/* Standalone Image Container */
+/* 9. Standalone Image Container */
 .img-wrapper {
   position: relative;
   width: 100%;
@@ -564,7 +563,7 @@ nav {
 }
 
 
-/* Popup Animal (used on all containers) */
+/* 10. Popup Animal */
 
 .popup-animal {
   position: absolute;
@@ -588,7 +587,7 @@ nav {
 }
 
 
-/* 10. Timelines */
+/* 11. Timelines */
 
 .timeline {
   max-width: 800px;
@@ -637,7 +636,7 @@ nav {
 }
 
 
-/* 11. Map Iframes */
+/* 12. Map Iframes */
 
 .map-frame {
   width: 100%;
@@ -646,10 +645,111 @@ nav {
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0,0,0,0.2);
   margin-top: 20px;
+  overflow: hidden;
+  display: block;
 }
 
 
-/* 12. Page Navigation Buttons */
+/* 13. Population Chart */
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    width: 100%;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-top: 24px;
+    margin-bottom: 16px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Loading Spinner */
+.chart-loading {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    color: var(--brown-light);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.chart-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--tan-light);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Error Message */
+.chart-error {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--brown-light);
+    background: var(--cream-dark);
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Stat Cards */
+.chart-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.chart-stat {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    border-top: 3px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+}
+
+.stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--brown-dark);
+}
+
+.stat-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--brown-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .chart-container { padding: 16px; min-height: 300px; }
+    .stat-value { font-size: 18px; }
+}
+
+
+/* 14. Page Navigation Buttons */
 
 .page-nav {
   display: flex;
@@ -696,7 +796,7 @@ nav {
 }
 
 
-/* 13. Conclusion Page */
+/* 15. Conclusion Page */
 
 .conclusion-hero-inner {
   background: var(--white);
@@ -748,7 +848,7 @@ nav {
 }
 
 
-/* 14. Responsive */
+/* 16. Responsive */
 
 @media (max-width: 860px) {
   .nav-links {display: none;}

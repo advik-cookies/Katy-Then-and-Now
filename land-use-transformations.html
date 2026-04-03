@@ -15,6 +15,9 @@
         gtag('config', 'G-F1MC3D76TK');
     </script>
 
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -23,6 +26,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/other/favicon.png">
 </head>
 <body>
     
@@ -217,6 +223,59 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Katy Population Chart -->
+            <div class="section-block">
+                <span class="section-label">Population Growth</span>
+                <h2 class="section-title">Katy's Population Over Time</h2>
+                <p class="body-text">
+                    Katy has experienced one of the most dramatic population booms
+                    in Texas history. From a small railroad town of just a few hundred
+                    residents in the early 1900s, the city and its surrounding area
+                    has grown into a community of over 25,000 within city limits and
+                    more than 500,000 in the greater Katy area.
+                </p>
+
+                <!-- Chart Container -->
+                <div class="chart-container">
+                    <div class="chart-loading" id="chartLoading">
+                        <div class="chart-spinner"></div>
+                        <p>Loading population data...</p>
+                    </div>
+                    <div class="chart-error" id="chartError" style="display: none;">
+                        <p>⚠️ Could not load live data. Showing historical estimates.</p>
+                    </div>
+                    <canvas id="populationChart"></canvas>
+                </div>
+
+                <!-- Stat Cards -->
+                <div class="chart-stats" id="chartStats" style="display: none;">
+                    <div class="chart-stat">
+                        <span class="stat-value" id="stat-earliest">—</span>
+                        <span class="stat-label">Population in 1900</span>
+                    </div>
+                    <div class="chart-stat">
+                        <span class="stat-value" id="stat-peak">—</span>
+                        <span class="stat-label">Peak Growth Decade</span>
+                    </div>
+                    <div class="chart-stat">
+                        <span class="stat-value" id="stat-latest">—</span>
+                        <span class="stat-label">Most Recent Estimate</span>
+                    </div>
+                    <div class="chart-stat">
+                        <span class="stat-value" id="stat-increase">—</span>
+                        <span class="stat-label">Total Increase</span>
+                    </div>
+                </div>
+
+                <p class="caption">
+                    Data: US Census Bureau Decennial Census &amp; American Community Survey.
+                    Pre-1990 figures are historical estimates from local records and the
+                    Texas State Historical Association.
+                </p>
             </div>
 
             <hr class="section-divider">
