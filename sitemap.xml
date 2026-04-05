@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
@@ -41,31 +40,6 @@
   <loc>https://www.katythenandnow.org/conclusion.html</loc>
   <lastmod>2026-04-03T21:58:04+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.katythenandnow.org/maps/addicks-barker-map.html</loc>
-  <lastmod>2026-04-03T21:58:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.katythenandnow.org/maps/ih10-map-overlay.html</loc>
-  <lastmod>2026-04-03T21:58:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.katythenandnow.org/maps/baker-road-map-overlay.html</loc>
-  <lastmod>2026-04-03T21:58:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.katythenandnow.org/maps/rhodes-stadium-map.html</loc>
-  <lastmod>2026-04-03T21:58:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.katythenandnow.org/maps/katy-map-overlay.html</loc>
-  <lastmod>2026-04-03T21:58:04+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 
 
